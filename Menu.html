@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Thực đơn 30 ngày | Tăng cơ - Giảm mỡ bụng</title>
+<style>
+:root{color-scheme:light;--bg:#f7f8f2;--surface:#fff;--text:#20372b;--muted:#718075;--line:#e5e9df;--green:#26734d;--orange:#d97736;--blue:#4786a8;--purple:#8066a8}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--text);font-family:system-ui,-apple-system,"Segoe UI",sans-serif;line-height:1.5}
+#app{background:var(--bg);min-height:100vh;width:100%;border-radius:0}
+.hero{padding:42px max(20px,calc((100vw - 1240px)/2));background:radial-gradient(circle at 85% 20%,#f2c87966,transparent 25%),linear-gradient(120deg,#173f2c,#26734d 62%,#8a9f53);color:white;position:relative;overflow:hidden}
+.hero-inner{max-width:1240px;margin:auto;display:flex;align-items:center;justify-content:space-between;gap:28px}.eyebrow{font-weight:800;letter-spacing:.12em;text-transform:uppercase;font-size:.78rem;opacity:.9}.hero h1{font-size:clamp(2rem,4vw,3.8rem);line-height:1.04;margin:10px 0}.hero p{max-width:700px;margin:0;font-size:1.05rem}.hero-badge{font-size:5rem;filter:drop-shadow(0 8px 8px #003a2b66);background:#ffffff20;border:1px solid #ffffff35;border-radius:28px;padding:22px}.hero p{line-height:1.7}.hero h1{letter-spacing:-.04em}
+main{max-width:1240px;margin:auto;padding:24px 18px 52px}.stats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;margin-top:-42px;position:relative}.stat{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:16px;box-shadow:0 7px 20px #0000000b}.stat strong{display:block;font-size:1.3rem;color:var(--green)}.stat span{color:var(--muted);font-size:.88rem}
+.section-intro{margin-top:34px}.section-intro h2{font-size:1.7rem;letter-spacing:-.03em;margin:0 0 5px}.section-intro p{margin:0;color:var(--muted)}.toolbar{display:flex;flex-wrap:wrap;gap:10px;margin:24px 0 18px;align-items:center}.search{flex:1;min-width:220px}input,select,button{font:inherit;border-radius:11px;border:1px solid var(--line);background:var(--surface);color:var(--text);padding:11px 13px}button{cursor:pointer;font-weight:700}button.primary{background:#087653;color:white;border-color:#087653}button:hover{filter:brightness(1.06)}.filters{display:flex;gap:8px;flex-wrap:wrap}.filters button[aria-pressed=true]{background:var(--green);color:#fff;border-color:transparent}
+.week{margin:28px 0}.week-title{display:flex;align-items:center;gap:12px;margin:0 0 13px;font-size:1.3rem}.week-title:before{content:"";width:7px;height:1.4em;border-radius:8px;background:var(--week-color,var(--green))}.cards{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px}.day-card{background:var(--surface);border:1px solid var(--line);border-radius:22px;overflow:hidden;box-shadow:0 8px 26px #243b2b0b;transition:transform .2s,box-shadow .2s}.day-card:hover{transform:translateY(-3px);box-shadow:0 14px 32px #243b2b18}.day-photo{display:block;width:100%;height:190px;object-fit:cover;background:#edf0e6}.photo-wrap{position:relative}.photo-tag{position:absolute;left:13px;bottom:12px;background:#fffdf0ed;color:#31513b;border-radius:999px;padding:6px 10px;font-size:.76rem;font-weight:800;box-shadow:0 3px 12px #0002}.day-head{padding:14px 16px;background:color-mix(in srgb,var(--week-color,var(--green)) 13%,var(--surface));display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--line)}.day-head h3{margin:0;font-size:1.05rem}.day-head .emoji{font-size:1.6rem}.meal-list{padding:5px 17px 14px}.meal{display:grid;grid-template-columns:140px minmax(0,1fr);gap:15px;align-items:center;padding:16px 0;border-bottom:1px dashed var(--line)}.meal:last-child{border-bottom:0}.meal-photo{display:block;width:140px;height:108px;object-fit:cover;border-radius:14px;background:#edf0e6;border:1px solid var(--line);box-shadow:0 3px 10px #20372b12}.meal-copy{min-width:0}.meal-label{display:flex;align-items:center;gap:7px;font-weight:800;font-size:.82rem;color:var(--week-color,var(--green));margin-bottom:4px}.meal p{margin:0;font-size:.9rem;line-height:1.5;overflow-wrap:anywhere}.meal-icon{width:22px;text-align:center;flex:0 0 22px}.checkline{display:flex;align-items:center;gap:8px;padding:0 15px 14px;color:var(--muted);font-size:.83rem}.checkline input{accent-color:#087653;width:17px;height:17px}
+.info-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;margin-top:30px}.info{padding:18px;background:var(--surface);border:1px solid var(--line);border-radius:16px}.info h3{margin:0 0 8px}.info ul{padding-left:20px;margin:0}.info li{margin:5px 0}.note{padding:15px 17px;border-left:4px solid #e2a338;background:color-mix(in srgb,#e2a338 10%,var(--surface));border-radius:10px;margin-top:16px;color:var(--text)}
+footer{text-align:center;color:var(--muted);padding:20px;font-size:.85rem}
+@media(max-width:900px){.cards{grid-template-columns:1fr}.stats{grid-template-columns:repeat(2,minmax(0,1fr))}.info-grid{grid-template-columns:1fr}.hero-badge{font-size:3.5rem}}
+@media(max-width:560px){.hero-inner{align-items:flex-start}.hero-badge{display:none}.cards{grid-template-columns:1fr}.stats{grid-template-columns:repeat(2,minmax(0,1fr))}.stat{padding:12px}.stat strong{font-size:1.05rem}main{padding-inline:12px}.hero{padding:26px 18px}.meal{grid-template-columns:150px minmax(0,1fr);gap:14px}.meal-photo{width:150px;height:112px}.meal p{font-size:.95rem}}
+@media print{body{background:white;color:#17372c}.hero{print-color-adjust:exact;-webkit-print-color-adjust:exact}.stats{margin-top:14px}.toolbar,.checkline,footer{display:none!important}.cards{grid-template-columns:repeat(2,minmax(0,1fr))}.day-card,.stat,.info{break-inside:avoid;box-shadow:none}.week{break-inside:auto}.day-card{margin-bottom:8px}main{max-width:none;padding:10px}.info-grid{grid-template-columns:repeat(3,minmax(0,1fr))}}
+</style>
+</head>
+<body>
+<div id="app">
+<header class="hero"><div class="hero-inner"><div><div class="eyebrow">Kế hoạch ăn uống 30 ngày</div><h1>Ăn đủ chất.<br>Khỏe hơn mỗi ngày.</h1><p>Thực đơn tăng cơ – giảm mỡ bụng, dùng thực phẩm quen thuộc, cơm nhà và khẩu phần dễ theo dõi.</p></div><div class="hero-badge" aria-hidden="true">🥗</div></div></header>
+<main>
+<section class="stats" aria-label="Mục tiêu dinh dưỡng">
+<div class="stat"><strong>1.800–1.900</strong><span>kcal/ngày · mức khởi điểm</span></div>
+<div class="stat"><strong>105–125 g</strong><span>protein/ngày</span></div>
+<div class="stat"><strong>30 ngày</strong><span>4 tuần + 2 ngày linh hoạt</span></div>
+<div class="stat"><strong>90–93 cm</strong><span>vòng eo hiện tại (ước tính)</span></div>
+</section>
+<div class="section-intro"><h2>Lịch ăn uống của bạn</h2><p>Chọn tuần, tìm món yêu thích và đánh dấu mỗi ngày đã hoàn thành.</p></div><div class="toolbar">
+<input class="search" id="search" type="search" placeholder="Tìm món ăn, ví dụ: cá, trứng, khoai lang…" aria-label="Tìm món ăn">
+<div class="filters" role="group" aria-label="Lọc theo tuần">
+<button data-week="0" aria-pressed="true">Tất cả</button><button data-week="1" aria-pressed="false">Tuần 1</button><button data-week="2" aria-pressed="false">Tuần 2</button><button data-week="3" aria-pressed="false">Tuần 3</button><button data-week="4" aria-pressed="false">Tuần 4</button><button data-week="5" aria-pressed="false">Ngày 29–30</button>
+</div>
+<button class="primary" id="print">In / Lưu PDF</button>
+</div>
+<div id="menu"></div>
+<section class="info-grid">
+<article class="info"><h3>🥩 Thực phẩm ưu tiên</h3><ul><li>Thịt nạc, gà bỏ da, cá, tôm, trứng</li><li>Đậu phụ, sữa và sữa chua không đường</li><li>Rau xanh, trái cây nguyên quả</li><li>Cơm, khoai, bún/phở theo khẩu phần</li></ul></article>
+<article class="info"><h3>⚖️ Cách cân khẩu phần</h3><ul><li>Cơm, khoai: cân sau khi nấu</li><li>Yến mạch: cân khô</li><li>Thịt/cá/tôm: phần ăn được sau khi nấu</li><li>Đo dầu ăn và hạn chế nước sốt nhiều đường</li></ul></article>
+<article class="info"><h3>🌿 Thói quen hằng ngày</h3><ul><li>Rau khoảng 400–600 g/ngày</li><li>Uống nước đều, ngủ 7–8 giờ</li><li>Đứng dậy vận động nhẹ sau 30–60 phút ngồi</li><li>Theo dõi cân nặng và vòng eo mỗi tuần</li></ul></article>
+</section>
+<div class="note"><strong>Lưu ý:</strong> Calo và protein là mục tiêu ước tính, không phải số đo chính xác của từng món. Điều chỉnh khẩu phần theo mức đói, cân nặng và vòng eo; không cần bỏ cơm hay ép cân giảm nhanh. Do có tiền sử vấn đề L4 và đôi khi tê chân/đau lưng, hãy được bác sĩ đánh giá trước khi tập tạ hoặc tăng tải. Nếu yếu chân tiến triển, tê vùng đáy chậu hoặc rối loạn tiểu tiện/đại tiện, cần đi khám khẩn cấp.</div>
+</main>
+<footer>Tiến bộ bền vững đến từ những thói quen nhỏ lặp lại mỗi ngày 💚</footer>
+</div>
+<script>
+const days = [{"day": 1, "week": 1, "meals": ["Yến mạch 50 g + sữa 250 ml + 2 trứng + chuối nhỏ", "Cơm 180 g + ức gà 150 g + rau 200 g + canh bí", "Sữa chua + đu đủ 200 g", "Cơm 150 g + cá rô phi 150 g + đậu phụ 100 g + rau 200 g"]}, {"day": 2, "week": 1, "meals": ["Bánh mì 60–70 g + 2 trứng + sữa 250 ml", "Cơm 180 g + heo nạc 150 g + rau muống 200 g", "Sữa chua + táo", "Cơm 150 g + tôm 180 g + đậu phụ 100 g + canh cải"]}, {"day": 3, "week": 1, "meals": ["Khoai lang 250 g + 2 trứng + sữa 250 ml", "Cơm 180 g + cá basa 160 g + rau cải 200 g + canh", "Chuối nhỏ + sữa 250 ml", "Cơm 150 g + bò nạc 140 g + bông cải 200 g"]}, {"day": 4, "week": 1, "meals": ["Yến mạch 50 g + sữa 250 ml + sữa chua + 2 trứng", "Cơm 180 g + gà bỏ da 150 g + bầu luộc 200 g", "Ổi 200 g + 1 trứng luộc", "Cơm 150 g + cá thu 140 g + đậu phụ 100 g + rau 200 g"]}, {"day": 5, "week": 1, "meals": ["Bánh mì 70 g + cá ngừ ngâm nước 100 g + dưa leo + sữa 200 ml", "Cơm 180 g + heo nạc 150 g + cải thìa 200 g", "Sữa chua + chuối nhỏ", "Cơm 150 g + tôm 180 g + 1 trứng + canh rau"]}, {"day": 6, "week": 1, "meals": ["Bún 180 g + bò nạc 120 g + rau thơm, giá", "Cơm 180 g + ức gà 150 g + rau củ 250 g", "Sữa 250 ml + đu đủ 200 g", "Cơm 150 g + cá lóc 160 g + đậu phụ 100 g + rau"]}, {"day": 7, "week": 1, "meals": ["Khoai lang 250 g + 2 trứng + sữa 250 ml", "Cơm 180 g + heo nạc 150 g + canh chua cá + rau", "Sữa chua + cam", "Cơm 150 g + bò nạc 140 g + nấm, rau 200 g"]}, {"day": 8, "week": 2, "meals": ["Yến mạch 50 g + sữa 250 ml + 2 trứng + chuối nhỏ", "Cơm 180 g + cá rô phi 160 g + rau 200 g", "Sữa chua + ổi 150 g", "Cơm 150 g + gà bỏ da 150 g + đậu phụ 100 g + canh bí"]}, {"day": 9, "week": 2, "meals": ["Bánh mì 70 g + 2 trứng + sữa 250 ml", "Cơm 180 g + bò nạc 150 g + bông cải 200 g", "Sữa 250 ml + táo", "Cơm 150 g + tôm 180 g + rau muống 200 g"]}, {"day": 10, "week": 2, "meals": ["Khoai lang 250 g + cá ngừ 100 g + sữa 200 ml", "Cơm 180 g + heo nạc 150 g + rau cải 200 g", "Sữa chua + chuối nhỏ", "Cơm 150 g + cá lóc 160 g + đậu phụ 100 g + rau"]}, {"day": 11, "week": 2, "meals": ["Phở: bánh phở 180 g + bò nạc 120 g + rau", "Cơm 180 g + gà bỏ da 150 g + rau củ 250 g", "Sữa 250 ml + đu đủ 200 g", "Cơm 150 g + cá basa 160 g + 1 trứng + rau"]}, {"day": 12, "week": 2, "meals": ["Yến mạch 50 g + sữa 250 ml + sữa chua + 2 trứng", "Cơm 180 g + tôm 180 g + đậu phụ 100 g + rau", "Ổi 200 g + sữa 200 ml", "Cơm 150 g + heo nạc 150 g + canh chua + rau"]}, {"day": 13, "week": 2, "meals": ["Bánh mì 70 g + 2 trứng + sữa 250 ml", "Cơm 180 g + cá thu 140 g + rau 200 g", "Chuối nhỏ + sữa chua", "Cơm 150 g + ức gà 150 g + nấm, rau 200 g"]}, {"day": 14, "week": 2, "meals": ["Khoai lang 250 g + 2 trứng + sữa 250 ml", "Cơm 180 g + bò nạc 150 g + rau củ 250 g", "Sữa 250 ml + cam", "Cơm 150 g + cá rô phi 160 g + đậu phụ 100 g + canh"]}, {"day": 15, "week": 3, "meals": ["Yến mạch 50 g + sữa 250 ml + 2 trứng + chuối nhỏ", "Cơm 180 g + gà bỏ da 150 g + rau 200 g", "Sữa chua + ổi 150 g", "Cơm 150 g + cá lóc 160 g + đậu phụ 100 g + canh"]}, {"day": 16, "week": 3, "meals": ["Bánh mì 70 g + cá ngừ 100 g + sữa 250 ml", "Cơm 180 g + heo nạc 150 g + rau muống 200 g", "Sữa 250 ml + táo", "Cơm 150 g + tôm 180 g + 1 trứng + rau"]}, {"day": 17, "week": 3, "meals": ["Khoai lang 250 g + 2 trứng + sữa 250 ml", "Cơm 180 g + cá rô phi 160 g + rau củ 250 g", "Sữa chua + chuối nhỏ", "Cơm 150 g + bò nạc 140 g + nấm, cải 200 g"]}, {"day": 18, "week": 3, "meals": ["Bún 180 g + gà 120 g + rau", "Cơm 180 g + heo nạc 150 g + canh bí + rau", "Sữa 250 ml + đu đủ 200 g", "Cơm 150 g + cá thu 140 g + đậu phụ 100 g + rau"]}, {"day": 19, "week": 3, "meals": ["Yến mạch 50 g + sữa 250 ml + sữa chua + 2 trứng", "Cơm 180 g + bò nạc 150 g + bông cải 200 g", "Ổi 200 g + 1 trứng luộc", "Cơm 150 g + cá basa 160 g + rau cải 200 g"]}, {"day": 20, "week": 3, "meals": ["Bánh mì 70 g + 2 trứng + sữa 250 ml", "Cơm 180 g + tôm 180 g + đậu phụ 100 g + rau", "Chuối nhỏ + sữa 250 ml", "Cơm 150 g + gà bỏ da 150 g + rau củ 250 g"]}, {"day": 21, "week": 3, "meals": ["Khoai lang 250 g + cá ngừ 100 g + sữa 200 ml", "Cơm 180 g + cá lóc 160 g + canh chua + rau", "Sữa chua + cam", "Cơm 150 g + heo nạc 150 g + đậu phụ 100 g + rau"]}, {"day": 22, "week": 4, "meals": ["Yến mạch 50 g + sữa 250 ml + 2 trứng + chuối nhỏ", "Cơm 180 g + gà bỏ da 150 g + rau 200 g", "Sữa chua + ổi 150 g", "Cơm 150 g + cá rô phi 160 g + đậu phụ 100 g + canh"]}, {"day": 23, "week": 4, "meals": ["Bánh mì 70 g + 2 trứng + sữa 250 ml", "Cơm 180 g + bò nạc 150 g + rau củ 250 g", "Sữa 250 ml + táo", "Cơm 150 g + tôm 180 g + rau xanh 200 g"]}, {"day": 24, "week": 4, "meals": ["Khoai lang 250 g + cá ngừ 100 g + sữa 200 ml", "Cơm 180 g + heo nạc 150 g + rau cải 200 g", "Sữa chua + chuối nhỏ", "Cơm 150 g + cá lóc 160 g + đậu phụ 100 g + canh"]}, {"day": 25, "week": 4, "meals": ["Phở: bánh phở 180 g + bò nạc 120 g + rau", "Cơm 180 g + gà bỏ da 150 g + rau củ 250 g", "Sữa 250 ml + cam", "Cơm 150 g + cá thu 140 g + rau 200 g"]}, {"day": 26, "week": 4, "meals": ["Yến mạch 50 g + sữa 250 ml + sữa chua + 2 trứng", "Cơm 180 g + tôm 180 g + đậu phụ 100 g + rau", "Ổi 200 g + sữa 200 ml", "Cơm 150 g + bò nạc 140 g + nấm, rau 200 g"]}, {"day": 27, "week": 4, "meals": ["Bánh mì 70 g + cá ngừ 100 g + sữa 250 ml", "Cơm 180 g + cá basa 160 g + rau 200 g", "Chuối nhỏ + sữa chua", "Cơm 150 g + gà bỏ da 150 g + đậu phụ 100 g + canh"]}, {"day": 28, "week": 4, "meals": ["Khoai lang 250 g + 2 trứng + sữa 250 ml", "Cơm 180 g + heo nạc 150 g + rau xanh 200 g", "Sữa 250 ml + đu đủ 200 g", "Cơm 150 g + tôm 180 g + 1 trứng + canh rau"]}, {"day": 29, "week": 5, "meals": ["Yến mạch 50 g + sữa 250 ml + 2 trứng + chuối nhỏ", "Cơm 180 g + bò nạc 150 g + bông cải 200 g", "Sữa chua + ổi 150 g", "Cơm 150 g + cá rô phi 160 g + đậu phụ 100 g + canh"]}, {"day": 30, "week": 5, "meals": ["Bánh mì 70 g + 2 trứng + sữa 250 ml", "Cơm 180 g + gà bỏ da 150 g + rau củ 250 g", "Sữa 250 ml + táo", "Cơm 150 g + cá lóc 160 g + tôm 100 g + rau 200 g"]}];
+const weeks = {
+1:{title:"Tuần 1 · Làm quen với khẩu phần",color:"#087653",emoji:"🌱"},
+2:{title:"Tuần 2 · Tăng sự đa dạng",color:"#d76b18",emoji:"🍊"},
+3:{title:"Tuần 3 · Duy trì protein, đổi món",color:"#276db1",emoji:"💪"},
+4:{title:"Tuần 4 · Giữ nhịp ăn uống bền vững",color:"#7550a5",emoji:"🌿"},
+5:{title:"Ngày 29–30 · Tổng kết và linh hoạt",color:"#b43d70",emoji:"🏁"}
+};
+const labels=[["☀️","Bữa sáng"],["🍲","Bữa trưa"],["🍓","Bữa phụ"],["🌙","Bữa tối"]];
+const foodPhotos={
+ chicken:{url:"https://images.unsplash.com/photo-1532550907401-a500c9a57435?auto=format&fit=crop&w=500&q=80",tag:"Gà và rau củ"},
+ pork:{url:"https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=500&q=80",tag:"Thịt nạc"},
+ fish:{url:"https://images.unsplash.com/photo-1519708227418-c8fd9a32b7a2?auto=format&fit=crop&w=500&q=80",tag:"Món cá"},
+ shrimp:{url:"https://recipeimages.migros.ch/crop/v-w-4000-h-4000-a-center_center/d49828dc4c42d9c22df9c71a856d50eddf418c66/tofu-stir-fry-mit-crevetten-und-gemuese-0-1-1.jpg",tag:"Tôm và rau"},
+ beef:{url:"https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=500&q=80",tag:"Thịt bò"},
+ pho:{url:"https://snapcalorie-webflow-website.s3.us-east-2.amazonaws.com/media/recipe_pics_v2/medium/vietnamese_rice_noodle_soup_with_beef_and_fresh_herbs_pho.jpg",tag:"Phở bò"},
+ noodles:{url:"https://snapcalorie-webflow-website.s3.us-east-2.amazonaws.com/media/recipe_pics_v2/medium/vietnamese_rice_noodle_soup_with_beef_and_fresh_herbs_pho.jpg",tag:"Bún và rau thơm"},
+ oats:{url:"https://media.suvalgyk.lt/suvalgyk_recipes/avizine-kose-su-vaisiais-ir-virtais-kiausiniais-a22d14d2.png",tag:"Yến mạch và trái cây"},
+ bread:{url:"https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&fit=crop&w=500&q=80",tag:"Bánh mì"},
+ sweetpotato:{url:"https://radarjabar.disway.id/upload/33ffd58a2d9993dbd655411f591a74a8.png",tag:"Khoai lang và trứng"},
+ eggs:{url:"https://images.unsplash.com/photo-1525351484163-7529414344d8?auto=format&fit=crop&w=500&q=80",tag:"Trứng"},
+ yogurt:{url:"https://images.unsplash.com/photo-1488477181946-6428a0291777?auto=format&fit=crop&w=500&q=80",tag:"Sữa chua và trái cây"},
+ fruit:{url:"https://images.unsplash.com/photo-149 alimentação?auto=format&fit=crop&w=500&q=80",tag:"Trái cây tươi"},
+ milk:{url:"https://images.unsplash.com/photo-1550583724-b2692b85b150?auto=format&fit=crop&w=500&q=80",tag:"Sữa và trái cây"},
+ healthy:{url:"https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&w=500&q=80",tag:"Rau xanh và thực phẩm đa dạng"}
+};
+// Chọn ảnh riêng cho từng bữa ăn dựa trên món/nhóm thực phẩm có trong mô tả.
+function photoForMeal(meal,index){
+ const t=meal.toLocaleLowerCase("vi");
+ if(/phở/.test(t)) return foodPhotos.pho;
+ if(/bún/.test(t)) return foodPhotos.noodles;
+ if(/yến mạch/.test(t)) return foodPhotos.oats;
+ if(/bánh mì/.test(t)) return foodPhotos.bread;
+ if(/khoai lang/.test(t)) return foodPhotos.sweetpotato;
+ if(/tôm/.test(t)) return foodPhotos.shrimp;
+ if(/cá ngừ|cá rô phi|cá basa|cá lóc|cá thu|canh chua cá|cá/.test(t)) return foodPhotos.fish;
+ if(/bò/.test(t)) return foodPhotos.beef;
+ if(/gà|ức gà/.test(t)) return foodPhotos.chicken;
+ if(/heo|thịt nạc/.test(t)) return foodPhotos.pork;
+ if(/sữa chua/.test(t)) return foodPhotos.yogurt;
+ if(/ổi|táo|chuối|đu đủ|cam/.test(t)) return foodPhotos.fruit;
+ if(/sữa/.test(t)) return foodPhotos.milk;
+ if(/trứng/.test(t)) return foodPhotos.eggs;
+ return foodPhotos.healthy;
+}
+const fallbackPhoto=foodPhotos.healthy.url;
+let activeWeek=0;
+const esc=s=>String(s).replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+function render(){
+ const q=document.getElementById("search").value.trim().toLocaleLowerCase("vi");
+ const shown=days.filter(d=>(!activeWeek||d.week===activeWeek)&&(!q||(String(d.day)+" "+d.meals.join(" ")).toLocaleLowerCase("vi").includes(q)));
+ const root=document.getElementById("menu"); root.innerHTML="";
+ let lastWeek=0;
+ shown.forEach(d=>{
+  if(d.week!==lastWeek){
+   lastWeek=d.week;
+   const sec=document.createElement("section");sec.className="week";sec.style.setProperty("--week-color",weeks[d.week].color);
+   sec.innerHTML='<h2 class="week-title">'+weeks[d.week].title+'</h2><div class="cards"></div>';root.appendChild(sec);
+  }
+  const card=document.createElement("article");card.className="day-card";card.style.setProperty("--week-color",weeks[d.week].color);
+  const meals=d.meals.map((m,i)=>{const photo=photoForMeal(m,i);return '<div class="meal"><img class="meal-photo" loading="lazy" src="'+photo.url+'" alt="'+esc(photo.tag)+'" onerror="this.onerror=null;this.src=\''+fallbackPhoto+'\'"><div class="meal-copy"><div class="meal-label"><span class="meal-icon">'+labels[i][0]+'</span>'+labels[i][1]+'</div><p>'+esc(m)+'</p></div></div>';}).join("");
+  card.innerHTML='<div class="day-head"><h3>Ngày '+d.day+'</h3><span class="emoji">'+weeks[d.week].emoji+'</span></div><div class="meal-list">'+meals+'</div><label class="checkline"><input type="checkbox" data-day="'+d.day+'"> Đã hoàn thành ngày này</label>';
+  root.lastChild.querySelector(".cards").appendChild(card);
+ });
+ if(!shown.length)root.innerHTML='<div class="info">Không tìm thấy món phù hợp. Thử từ khóa khác nhé.</div>';
+ document.querySelectorAll("[data-day]").forEach(cb=>{cb.checked=localStorage.getItem("menu30-day-"+cb.dataset.day)==="1";cb.addEventListener("change",()=>localStorage.setItem("menu30-day-"+cb.dataset.day,cb.checked?"1":"0"))});
+}
+document.getElementById("search").addEventListener("input",render);
+document.querySelectorAll("[data-week]").forEach(b=>b.addEventListener("click",()=>{activeWeek=Number(b.dataset.week);document.querySelectorAll("[data-week]").forEach(x=>x.setAttribute("aria-pressed",String(x===b)));render()}));
+document.getElementById("print").addEventListener("click",()=>window.print());
+render();
+</script>
+</body>
+</html>
